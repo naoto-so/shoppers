@@ -2,9 +2,11 @@ class Admin::ItemsController < ApplicationController
   before_action :if_not_admin
 
   def index
+    @items = Item.all
   end
 
   def new
+    @item = Item.new
   end
 
   private
