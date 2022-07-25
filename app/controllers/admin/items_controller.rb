@@ -5,11 +5,10 @@ class Admin::ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
   end
 
   private
   def if_not_admin
-    redirect_to root_path unless current_user.admin?
+    redirect_to root_path unless user_signed_in? && current_user.admin?
   end
 end
