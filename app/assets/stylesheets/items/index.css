@@ -1,0 +1,8 @@
+.set-contents {
+  display: flex;
+}
+
+.set-list {
+  list-style: none;
+  margin-right: 50px;
+}

@@ -1,9 +1,16 @@
 <%= render "shared/header" %>
-<% @items.each do |item| %>
-  <li class='list'>
-    <%= link_to '/' do %>
-      <%= image_tag item.image.variant(resize: '270x270') %>
-      <%= item.item %>
-    <% end %>
-  </li>
-<% end %>
+<h1 class="title-set">セット商品</h1>
+<div class="set-contents">
+  <% @items.each do |item| %>
+    <li class='set-list'>
+      <%= link_to '/' do %>
+        <div class="list-image">
+          <%= image_tag item.image.variant(resize: '270x270') %>
+        </div>
+        <div class="list-item">
+          <%= item.item %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</div>
