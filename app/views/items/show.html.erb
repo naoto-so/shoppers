@@ -1,0 +1,13 @@
+<h1>【詳細画面】</h1>
+<div class="show-contents">
+  <div class="show-item">
+    <%= @item.item %>
+  </div>
+  <div class="show-image">
+    <%= image_tag @item.image.variant(resize: '500x500') %>
+  </div>
+  <div class="show-explain">
+    <%= @item.explain %>
+  </div>
+</div>
+<%= link_to 'トップページへ戻る', "/" %>
