@@ -1,3 +1,23 @@
-<h1>出品画面</h1>
-
-<%= link_to 'トップページ', "/" %>
+<h1>【出品画面】</h1>
+<div class="listing-form">
+  <%= form_with(model: [ :admin, @item ], local: true) do |form| %>
+    <div class="item-image">
+      <%= form.file_field :image, class:"item-image" %>
+    </div>
+    <div class="item-name">
+      <%= form.text_field :item, placeholder: "商品名" %>
+    </div>
+    <div class="item-explain">
+      <%= form.text_area :explain, placeholder: "説明", rows: "10" %>
+    </div>
+    <div class="item-price">
+      <%= form.text_field :price, placeholder: "参考価格" %>
+    </div>
+    <div class="send-btn">
+      <%= form.submit "出品" %>
+    </div>
+  <% end %>
+</div>
+<div class="top">
+  <br><%= link_to 'トップページへ戻る', "/" %>
+</div>
