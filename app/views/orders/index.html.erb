@@ -1,0 +1,9 @@
+<h1>【注文画面】</h1>
+<div class="order-form">
+<h1>リクエスト</h1>
+  <%= form_with(model: @item, local: true) do |form| %>
+    <div class="item-request">
+      <%= form.text_area :request, placeholder: "お買い物リストの詳細", rows: "15" %>
+    </div>
+  <% end %>
+</div>

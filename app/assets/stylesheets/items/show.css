@@ -1,11 +1,14 @@
-.show-contents_and_order-form {
+.show-main {
   display: flex;
-}
-
-.show-contents {
-  width: 50%;
+  justify-content: center;
 }
 
 .show-explain {
-  width: 500px;
+  width: 700px;
+}
+
+.show-low-contents {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
 }

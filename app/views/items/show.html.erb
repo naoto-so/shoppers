@@ -1,5 +1,5 @@
 <h1>【詳細画面】</h1>
-<div class="show-contents_and_order-form">
+<div class="show-main">
   <div class="show-contents">
     <div class="show-item">
       <%= @item.item %>
@@ -15,21 +15,14 @@
       <%= @item.price %>円
     </div>
   </div>
-  <div class="order-form">
-  <h1>リクエスト</h1>
-    <%= form_with(model: @item, local: true) do |form| %>
-      <div class="item-request">
-        <%= form.text_area :request, placeholder: "お買い物リストの詳細", rows: "15" %>
-      </div>
-    <% end %>
-  </div>
 </div>
-
-<div class="show-edit">
+<div class="show-low-contents">
   <% if user_signed_in? %>
     <% if current_user.admin? %>
       <br><%= link_to "商品の編集", edit_admin_item_path(@item.id), method: :get, class: "edit-btn" %>
       <br><%= link_to "削除", "#", method: :delete, class:"destroy-btn" %>
+    <% else %>
+      <%= link_to "注文画面に進む", item_orders_path(@item), class:"order-btn"%>
     <% end %>
   <% end %>
 </div>
