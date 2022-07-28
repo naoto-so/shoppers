@@ -1,6 +1,6 @@
 <h1>【詳細画面】</h1>
-<div class="show-main">
-  <div class="show-contents">
+<div class="show-up">
+  <div class="show-up-contents">
     <div class="show-item">
       <%= @item.item %>
     </div>
@@ -16,14 +16,17 @@
     </div>
   </div>
 </div>
-<div class="show-low-contents">
-  <% if user_signed_in? %>
-    <% if current_user.admin? %>
-      <br><%= link_to "商品の編集", edit_admin_item_path(@item.id), method: :get, class: "edit-btn" %>
-      <br><%= link_to "削除", "#", method: :delete, class:"destroy-btn" %>
-    <% else %>
-      <%= link_to "注文画面に進む", item_orders_path(@item), class:"order-btn"%>
+
+<div class="show-low">
+  <div class="show-low-contents">
+    <% if user_signed_in? %>
+      <% if current_user.admin? %>
+        <br><%= link_to "商品の編集", edit_admin_item_path(@item.id), method: :get, class: "edit-btn" %>
+        <br><%= link_to "削除", "#", method: :delete, class:"destroy-btn" %>
+      <% else %>
+        <%= link_to "注文画面へ進む", item_orders_path(@item), class:"order-btn"%>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 <br><%= link_to 'トップページへ戻る', "/" %>
