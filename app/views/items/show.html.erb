@@ -10,4 +10,12 @@
     <%= @item.explain %>
   </div>
 </div>
-<%= link_to 'トップページへ戻る', "/" %>
+<div class="show-edit">
+  <% if user_signed_in? %>
+    <% if current_user.admin? %>
+      <br><%= link_to "商品の編集", edit_admin_item_path(@item.id), method: :get, class: "edit-btn" %>
+      <br><%= link_to "削除", "#", method: :delete, class:"destroy-btn" %>
+    <% end %>
+  <% end %>
+</div>
+<br><%= link_to 'トップページへ戻る', "/" %>

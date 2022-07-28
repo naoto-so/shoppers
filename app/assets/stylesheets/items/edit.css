@@ -1,0 +1,12 @@
+.edit-form {
+  display: flex;
+  justify-content: center;
+}
+
+.item-image,
+.item-name,
+.item-explain,
+.item-price,
+.send-btn {
+  margin-top: 20px;
+}
