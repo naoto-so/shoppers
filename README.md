@@ -94,11 +94,12 @@ Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Stu
 
 ## ordersテーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
-| pay    | references | null: false                    |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| item    | references | null: false, foreign_key: true |
+| request | text       | null: false                    |
+| pay_id  | integer    | null: false                    |
 
 ### Association
 - belongs_to :user

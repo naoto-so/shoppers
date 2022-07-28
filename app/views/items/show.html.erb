@@ -10,6 +10,15 @@
     <%= @item.explain %>
   </div>
 </div>
+
+<div class="order-form">
+  <%= form_with(model: @item, local: true) do |form| %>
+    <div class="item-request">
+      <%= form.text_area :explain, placeholder: "お買い物リストの詳細", rows: "15" %>
+    </div>
+  <% end %>
+</div>
+
 <div class="show-edit">
   <% if user_signed_in? %>
     <% if current_user.admin? %>
