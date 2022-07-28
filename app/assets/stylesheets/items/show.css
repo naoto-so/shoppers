@@ -1,2 +1,11 @@
+.show-contents_and_order-form {
+  display: flex;
+}
+
 .show-contents {
+  width: 50%;
+}
+
+.show-explain {
+  width: 500px;
 }

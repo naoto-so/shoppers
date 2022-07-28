@@ -1,22 +1,28 @@
 <h1>【詳細画面】</h1>
-<div class="show-contents">
-  <div class="show-item">
-    <%= @item.item %>
-  </div>
-  <div class="show-image">
-    <%= image_tag @item.image.variant(resize: '500x500') %>
-  </div>
-  <div class="show-explain">
-    <%= @item.explain %>
-  </div>
-</div>
-
-<div class="order-form">
-  <%= form_with(model: @item, local: true) do |form| %>
-    <div class="item-request">
-      <%= form.text_area :explain, placeholder: "お買い物リストの詳細", rows: "15" %>
+<div class="show-contents_and_order-form">
+  <div class="show-contents">
+    <div class="show-item">
+      <%= @item.item %>
     </div>
-  <% end %>
+    <div class="show-image">
+      <%= image_tag @item.image.variant(resize: '500x500') %>
+    </div>
+    <div class="show-explain">
+      <%= @item.explain %>
+    </div>
+    <div class="show-price">
+      <br><h2>＜参考価格＞</h2>
+      <%= @item.price %>円
+    </div>
+  </div>
+  <div class="order-form">
+  <h1>リクエスト</h1>
+    <%= form_with(model: @item, local: true) do |form| %>
+      <div class="item-request">
+        <%= form.text_area :request, placeholder: "お買い物リストの詳細", rows: "15" %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="show-edit">
