@@ -31,16 +31,16 @@ https://shoppers-38148.herokuapp.com/
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1An_pez49KeCL_nDz16VDP1tPSFaTFhr3vSay2PVd7zc/edit#gid=982722306
 
-# 実装した機能についての画像やGIFおよびその説明
+<!-- # 実装した機能についての画像やGIFおよびその説明 -->
 
 # 実装予定の機能
 現在、商品掲載機能を実装中。
 
 その後、商品注文機能・注文確定機能を実装予定。
 
-# データベース設計
+<!-- # データベース設計 -->
 
-# 画面遷移図
+<!-- # 画面遷移図 -->
 
 # 開発環境
 Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Studio Code / AWS(予定)
@@ -56,7 +56,7 @@ Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Stu
 
 % yarn install
 
-# 工夫したポイント
+<!-- # 工夫したポイント -->
 
 
 
