@@ -38,7 +38,9 @@ https://docs.google.com/spreadsheets/d/1An_pez49KeCL_nDz16VDP1tPSFaTFhr3vSay2PVd
 
 その後、商品注文機能・注文確定機能を実装予定。
 
-<!-- # データベース設計 -->
+# データベース設計
+
+[![Image from Gyazo](https://i.gyazo.com/3ada22eb80bda206e916f41052e26053.png)](https://gyazo.com/3ada22eb80bda206e916f41052e26053)
 
 <!-- # 画面遷移図 -->
 
