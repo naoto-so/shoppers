@@ -48,7 +48,7 @@ https://docs.google.com/spreadsheets/d/1An_pez49KeCL_nDz16VDP1tPSFaTFhr3vSay2PVd
 [![Image from Gyazo](https://i.gyazo.com/f5c09859f57dc30bc4cc0d5917a3b19d.png)](https://gyazo.com/f5c09859f57dc30bc4cc0d5917a3b19d)
 
 # 開発環境
-Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Studio Code / AWS(予定)
+Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / AWS
 
 # ローカルでの動作方法
 以下のコマンドを順に実行
@@ -61,74 +61,6 @@ Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Stu
 
 % yarn install
 
-<!-- # 工夫したポイント -->
-
-
-
-
-
-
-
-<!-- 
-
-# テーブル設計
-
-## usersテーブル
-
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| admin              | boolean | null: false               |
-| name               | string  | null: false               |
-| kana               | string  | null: false               |
-| tel                | string  | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-
-### Association
-- has_many :orders
-
-## itemsテーブル
-
-| Column  | Type    | Options     |
-| ------- | ------- | ----------- |
-| item    | string  | null: false |
-| explain | text    | null: false |
-| price   | integer | null: false |
-
-### Association
-- has_one :order
-
-## ordersテーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| item    | references | null: false, foreign_key: true |
-| request | text       | null: false                    |
-| pay_id  | integer    | null: false                    |
-
-### Association
-- belongs_to :user
-- belongs_to :item
-- has_one :address
-
-## addressesテーブル
-
-| Column         | Type       | Options                        |
-| -------------- | ---------- | ------------------------------ |
-| postal_code    | string     | null: false                    |
-| prefecture_id  | integer    | null: false                    |
-| city           | string     | null: false                    |
-| address_number | string     | null: false                    |
-| building       | string     |                                |
-| order          | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :order
-
-## postsテーブル
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| title  | string | null: false |
-| text   | text   | null: false |
+# 工夫したポイント
+商品をアプリ上に掲載するのは管理者のみなので、出品に関する操作ができるのを管理者のみに制限した。
+deviseに導入されているadminという機能を使い管理者ユーザーを作成しアクションの制限とフロント実装により一般ユーザーが出品できないよう工夫した。
