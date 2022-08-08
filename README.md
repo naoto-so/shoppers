@@ -42,7 +42,10 @@ https://docs.google.com/spreadsheets/d/1An_pez49KeCL_nDz16VDP1tPSFaTFhr3vSay2PVd
 
 [![Image from Gyazo](https://i.gyazo.com/3ada22eb80bda206e916f41052e26053.png)](https://gyazo.com/3ada22eb80bda206e916f41052e26053)
 
-<!-- # 画面遷移図 -->
+# 画面遷移図
+
+[![Image from Gyazo](https://i.gyazo.com/8a37894cd7c182f1688b47bf3a98e3cd.png)](https://gyazo.com/8a37894cd7c182f1688b47bf3a98e3cd)
+[![Image from Gyazo](https://i.gyazo.com/f5c09859f57dc30bc4cc0d5917a3b19d.png)](https://gyazo.com/f5c09859f57dc30bc4cc0d5917a3b19d)
 
 # 開発環境
 Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Studio Code / AWS(予定)
@@ -65,7 +68,8 @@ Ruby / Ruby on Rails / JavaScript(予定) / MySQL / GitHub / Heroku / Visual Stu
 
 
 
------------------------------------------------------
+
+<!-- 
 
 # テーブル設計
 
